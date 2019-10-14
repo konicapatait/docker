@@ -54,7 +54,7 @@
 -  `Container` : Running instance of image, a process by all means.
 -  `Registry` : Images are stored in registry. Think of apt, yum, pip or npm. Docker offers public registry that anyone can use to store images.
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Docker Jargons")
+![alt text](https://github.com/konicapatait/docker/blob/master/images/docker-arch.png "Docker Jargons")
 
 
 
