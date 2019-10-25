@@ -1,0 +1,17 @@
+application:
+  name: SpringBootDockerTemplate
+
+logging:
+  level:
+    org.springframework: ERROR
+    com.myspring.template: DEBUG
+
+server:
+  port : 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /actuator

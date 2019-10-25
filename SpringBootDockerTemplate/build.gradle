@@ -1,0 +1,41 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.0.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+}
+
+group = 'com.myspring.template'
+version = '1.0.0-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+repositories {
+	mavenCentral()
+}
+
+repositories {
+	maven { name = "DISH Artifactory"; url = "https://artifactory.global.dish.com/artifactory/repo" }
+	maven { name = "IT Maven"; url = "http://it-maven/content/repositories/m2repo/" }
+}
+
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
+
+wrapper {
+	gradleVersion = "5.1.1"
+	distributionUrl = "https://artifactory.global.dish.com/artifactory/gradle-dist/gradle-${gradleVersion}-bin.zip"
+}
+
+
