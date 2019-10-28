@@ -1,0 +1,7 @@
+pluginManagement {
+    repositories {
+        maven { url = "https://artifactory.global.dish.com/artifactory/repo" }
+        maven { url = "https://artifactory.global.dish.com/artifactory/gradle-plugins" }
+    }
+}
+rootProject.name = 'SpringDockerGradleTemplate'
